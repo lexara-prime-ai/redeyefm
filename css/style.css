@@ -471,10 +471,10 @@ nav .active-section span {
   content: '\f104';
 }
 
-.Modern-Slider .item .image {
+/* .Modern-Slider .item .image {
   animation: zoomin 12s ease-in-out infinite alternate;
   -webkit-animation: zoomin 12s ease-in-out infinite alternate;
-}
+} */
 
 @keyframes zoomin {
   0% {
