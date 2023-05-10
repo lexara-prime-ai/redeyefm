@@ -177,6 +177,20 @@ header {
   background-color: #232323;
 }
 
+/* SCROLL BAR STYLING */
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--red-alt);
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.2);
+}
 
 /************* Sidebar Style *************/
 
@@ -220,11 +234,38 @@ header {
 }
 
 /* MOBILE PLAYER */
-.mobile-player {
-  text-align: center;
-  background: rgba(0, 0, 0, 0.2);
-  padding: 1rem;
+.player {
+  background: whitesmoke;
+  box-shadow: 0 2rem 2rem 0 rgba(0, 0, 0, .6);
+  padding: 1.5rem;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  width: 30%;
+  height: 140px;
+  z-index: 90;
+  animation: hover 3s infinite;
+  opacity: .9;
+  cursor: pointer;
+  transition: .4s all ease;
 }
+
+.player:hover {
+  opacity: 1;
+}
+
+@keyframes hover {
+  0% {
+    transform: translateY(-4px);
+  }
+  50% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(-4px);
+  }
+}
+
 
 .main-text span {
   animation: glow2 2.5s infinite;
@@ -782,14 +823,14 @@ nav .active-section span {
 
 /* Styling For Iframe */
 
-iframe {
+/* iframe {
   border-radius: 21px;
-}
+} */
 
 @media (max-width: 400px) {
-  iframe {
+  /* iframe {
     width: 100%;
-  }
+  } */
 }
 
 #video .section-heading {
@@ -1033,6 +1074,11 @@ iframe {
   .responsive-nav {
     display: block;
     height: 60px;
+  }
+
+  .player {
+    width: 100%;
+    opacity: 1;
   }
 
   .page-content {
