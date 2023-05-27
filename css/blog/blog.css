@@ -87,7 +87,13 @@
     line-height: 24px;
 }
 
-
+.back {
+    border: none;
+    padding: 1rem;
+    background: var(--red-alt);
+    color: #eee;
+    font-weight: 500;
+}
 
 /* 
 *------------
