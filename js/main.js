@@ -51,10 +51,12 @@ jQuery(document).ready(function($) {
             loop:true,
             margin:30,
             responsiveClass:true,
+            touchDrag: false,
+            mouseDrag: false,
             responsive:{
                 0:{
                     items:1,
-                    nav:true
+                    nav:false
                 },
                 600:{
                     items:2,
@@ -112,6 +114,4 @@ jQuery(document).ready(function($) {
           e.preventDefault();
           $('html, body').animate({ scrollTop: $($(this).attr('href')).offset().top -0 }, 500, 'linear');
         });
-
-
 });
